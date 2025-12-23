@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Chow - Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="profile-image-container">
+                <img src="images/profile.jpg" alt="Mi Chow" class="profile-image">
+            </div>
+            <div class="hero-text">
+                <h1>Hi, I'm Mi Chow!</h1>
+                <p class="subtitle">Algorithm Engineer & Researcher 🚀</p>
+                <p class="bio">
+                    I'm a master's student in <strong>Applied Statistics</strong> at <strong>Shanghai Center for Mathematical Sciences (SCMS)</strong>, <strong>Fudan University</strong>. I'm passionate about <strong>LLMs</strong> and <strong>Multi-agent Systems</strong>. 
+                    Currently building smarter agents at Meituan. I love turning complex data into actionable intelligence.
+                </p>
+                <div class="contact-info">
+                    <a href="mailto:michow796@gmail.com"><i class="fas fa-envelope"></i> michow796@gmail.com</a>
+                    <span><i class="fas fa-phone"></i> +86 189-4509-7736</span>
+                </div>
+            </div>
+        </div>
+        <!-- Colorful Dashed Line as Border -->
+        <div class="colorful-dashed-line">
+            <div class="dashed-line"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Education Section -->
+        <section class="section-education">
+            <h2 class="section-title"><span class="icon-box">🎓</span> Education</h2>
+            <div class="card-list">
+                <div class="card wide-card">
+                    <div class="card-left">
+                        <div class="card-logo-wrapper">
+                            <img src="images/fudan_icon.jpg" alt="Fudan University Logo" class="card-logo">
+                        </div>
+                    </div>
+                    <div class="card-center">
+                        <h3>Master of Applied Statistics</h3>
+                        <h4>Fudan University</h4>
+                    </div>
+                    <div class="card-right">
+                        <span class="period">Sep 2023 - Jun 2026</span>
+                    </div>
+                </div>
+                <div class="card wide-card">
+                    <div class="card-left">
+                        <div class="card-logo-wrapper">
+                            <img src="images/nefu_icon.png" alt="NEFU Logo" class="card-logo">
+                        </div>
+                    </div>
+                    <div class="card-center">
+                        <h3>Bachelor of Int'l Economics and Trade</h3>
+                        <h4>Northeast Forestry University</h4>
+                    </div>
+                    <div class="card-right">
+                        <span class="period">Sep 2017 - Jun 2022</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section-experience">
+            <h2 class="section-title"><span class="icon-box">💼</span> Experience</h2>
+            <div class="card-list">
+                <div class="card wide-card">
+                    <div class="card-left">
+                        <div class="card-logo-wrapper">
+                            <img src="images/xiaomei.jpg" alt="Xiaomei App Icon" class="card-logo">
+                        </div>
+                    </div>
+                    <div class="card-center">
+                        <h3>LLM Application Algorithm Intern</h3>
+                        <h4>Meituan</h4>
+                        <p class="card-desc">
+                            Core developer of <a href="https://apps.apple.com/us/app/%E5%B0%8F%E7%BE%8E-ai%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%A7%98%E4%B9%A6/id6748377336?l=zh-Hans-CN" target="_blank" class="project-link">Xiaomei</a>, Meituan's AI Life Assistant. Leveraging LLM technology to provide intelligent, conversational services for daily life.
+                        </p>
+                    </div>
+                    <div class="card-right">
+                        <span class="tag tag-intern">Internship</span>
+                        <span class="period">Aug 2025 - Present</span>
+                    </div>
+                </div>
+                <div class="card wide-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-microscope"></i></div>
+                    </div>
+                    <div class="card-center">
+                        <h3>Cross-Domain Depression Detection</h3>
+                        <h4>Thesis Project</h4>
+                        <p class="card-desc">Developing BDDA-Net for robust depression detection across different clinical datasets.</p>
+                    </div>
+                    <div class="card-right">
+                        <span class="tag tag-research">Research</span>
+                        <span class="period">Aug 2025 - Jun 2026</span>
+                    </div>
+                </div>
+                <div class="card wide-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                    </div>
+                    <div class="card-center">
+                        <h3>Kaggle: LLM Generated Text Detection</h3>
+                        <h4>Silver Medal Winner 🥈</h4>
+                        <p class="card-desc">
+                            Built a robust ensemble classifier (MNB + SGD) using custom BPE tokenization and TF-IDF features to distinguish AI-generated text. Achieved <strong>0.90 AUC-ROC</strong>.
+                        </p>
+                    </div>
+                    <div class="card-right">
+                        <span class="tag tag-competition">Competition</span>
+                        <span class="period">Oct 2023 - Nov 2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title"><span class="icon-box">⚡</span> Professional Skills</h2>
+            <div class="wide-card skill-summary-card">
+                <div class="card-left">
+                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                </div>
+                <div class="card-center">
+                    <h3>Advanced Technical Stack</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LLM Fine-tuning & Alignment (RLHF/DPO)</span>
+                        <span class="skill-tag">Multi-agent Systems</span>
+                        <span class="skill-tag">Cross-domain Adaptation</span>
+                        <span class="skill-tag">Ensemble Learning</span>
+                        <span class="skill-tag">PyTorch & Transformers</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section class="section-interests">
+            <h2 class="section-title"><span class="icon-box">🌟</span> Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <span class="interest-icon">🏀</span>
+                    <span>Basketball</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🏓</span>
+                    <span>Ping Pong</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">📸</span>
+                    <span>Photography</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🏸</span>
+                    <span>Badminton</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🎵</span>
+                    <span>Music</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">✈️</span>
+                    <span>Traveling</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">☕</span>
+                    <span>Coffee</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ by Mi Chow © 2025</p>
+            <div class="social-links">
+                <a href="https://github.com/mi-chow" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-icon');
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Add ripple effect
+            const button = document.querySelector('.theme-toggle');
+            button.style.transform = 'scale(0.9) rotate(180deg)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1.1) rotate(360deg)';
+            }, 150);
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const themeIcon = document.querySelector('.theme-icon');
+            themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        });
+
+        // Enhanced sparkle cursor effect
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.97) {
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.innerHTML = ['✨', '⭐', '💫', '🌟'][Math.floor(Math.random() * 4)];
+            sparkle.style.color = ['#218bff', '#8250df', '#c8131d', '#9a6700'][Math.floor(Math.random() * 4)];
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        // Enhanced particle explosion on click
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'A' && !e.target.closest('.theme-toggle')) {
+                createParticleExplosion(e.clientX, e.clientY);
+            }
+        });
+
+        function createParticleExplosion(x, y) {
+            const colors = ['#218bff', '#8250df', '#c8131d', '#9a6700', '#1f883d'];
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 60 + Math.random() * 80;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.transform = `translate(${tx}px, ${ty}px) scale(0)`;
+                document.body.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
+        }
+
+        // Add entrance animation to elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.wide-card, section');
+            elements.forEach((el) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Add hover sound effect (visual feedback)
+        document.querySelectorAll('.wide-card, .interest-item').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = element.style.transform + ' scale(1.02)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = element.style.transform.replace(' scale(1.02)', '');
+            });
+        });
+
+        // Typing effect for hero title
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.hero h1');
+            heroTitle.classList.add('typing-text');
+        });
+
+        // Add hover sound effect (visual feedback)
+        document.querySelectorAll('.wide-card, .interest-item').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = element.style.transform + ' scale(1.02)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = element.style.transform.replace(' scale(1.02)', '');
+            });
+        });
+
+        // Typing effect for hero title
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.hero h1');
+            heroTitle.classList.add('typing-text');
+        });
+    </script>
+</body>
+</html>
