@@ -16,12 +16,15 @@
         <span class="theme-icon">🌙</span>
     </button>
 
-    <!-- Floating Background Shapes -->
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
+    <!-- Balanced Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="floating-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
     </div>
 
     <header class="hero">
@@ -238,35 +241,36 @@
             themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
         });
 
-        // Enhanced sparkle cursor effect
+        // Balanced sparkle effect
         document.addEventListener('mousemove', (e) => {
-            if (Math.random() > 0.97) {
-                createSparkle(e.clientX, e.clientY);
+            if (Math.random() > 0.98) {
+                createBalancedSparkle(e.clientX, e.clientY);
             }
         });
 
-        function createSparkle(x, y) {
+        function createBalancedSparkle(x, y) {
             const sparkle = document.createElement('div');
             sparkle.className = 'sparkle';
             sparkle.style.left = x + 'px';
             sparkle.style.top = y + 'px';
-            sparkle.innerHTML = ['✨', '⭐', '💫', '🌟'][Math.floor(Math.random() * 4)];
-            sparkle.style.color = ['#218bff', '#8250df', '#c8131d', '#9a6700'][Math.floor(Math.random() * 4)];
+            sparkle.innerHTML = ['✨', '⭐'][Math.floor(Math.random() * 2)];
+            sparkle.style.color = ['#218bff', '#8250df'][Math.floor(Math.random() * 2)];
+            sparkle.style.fontSize = '14px';
             document.body.appendChild(sparkle);
             
-            setTimeout(() => sparkle.remove(), 1000);
+            setTimeout(() => sparkle.remove(), 900);
         }
 
-        // Enhanced particle explosion on click
+        // Balanced particle effect on click
         document.addEventListener('click', (e) => {
             if (e.target.tagName !== 'A' && !e.target.closest('.theme-toggle')) {
-                createParticleExplosion(e.clientX, e.clientY);
+                createBalancedParticles(e.clientX, e.clientY);
             }
         });
 
-        function createParticleExplosion(x, y) {
-            const colors = ['#218bff', '#8250df', '#c8131d', '#9a6700', '#1f883d'];
-            const particleCount = 15;
+        function createBalancedParticles(x, y) {
+            const colors = ['#218bff', '#8250df', '#c8131d', '#9a6700'];
+            const particleCount = 10; // Balanced amount
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -276,7 +280,7 @@
                 particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 
                 const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 60 + Math.random() * 80;
+                const velocity = 50 + Math.random() * 50; // Moderate velocity
                 const tx = Math.cos(angle) * velocity;
                 const ty = Math.sin(angle) * velocity;
                 
