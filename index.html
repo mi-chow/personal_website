@@ -40,9 +40,10 @@
                     Currently building smarter agents at Meituan. I love turning complex data into actionable intelligence.
                 </p>
                 <div class="contact-info">
-                    <a href="mailto:michow796@gmail.com"><i class="fas fa-envelope"></i> michow796@gmail.com</a>
+                    <a href="mailto:michow796@gmail.com" id="email-link" onclick="copyEmail(event)"><i class="fas fa-envelope"></i> michow796@gmail.com</a>
                     <span><i class="fas fa-phone"></i> +86 189-4509-7736</span>
                 </div>
+                <div id="copy-notification" class="copy-notification">Email copied to clipboard!</div>
             </div>
         </div>
         <!-- Colorful Dashed Line as Border -->
@@ -350,6 +351,49 @@
             const heroTitle = document.querySelector('.hero h1');
             heroTitle.classList.add('typing-text');
         });
+
+        // Copy email function
+        function copyEmail(event) {
+            event.preventDefault(); // Prevent default mailto action
+
+            const email = 'michow796@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                // Show notification
+                const notification = document.getElementById('copy-notification');
+                notification.classList.add('show');
+
+                // Create sparkle effect
+                const emailLink = document.getElementById('email-link');
+                const rect = emailLink.getBoundingClientRect();
+                for (let i = 0; i < 8; i++) {
+                    createBalancedParticles(rect.left + rect.width / 2, rect.top + rect.height / 2);
+                }
+
+                // Hide notification after 2 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Copy failed:', err);
+                // Fallback for older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const notification = document.getElementById('copy-notification');
+                    notification.classList.add('show');
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Fallback copy failed:', err);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
     </script>
 </body>
 </html>
