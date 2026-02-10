@@ -1,180 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Chow | AI Algorithm Engineer</title>
-  <meta name="description" content="Mi Chow personal website - AI Algorithm Engineer focused on LLMs and multi-agent systems.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Chow | Portfolio Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <noscript>
+        <style>
+            #openingScreen {
+                display: none;
+            }
+
+            body {
+                overflow: auto;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
-  <div class="bg-layers" aria-hidden="true">
-    <div class="shape shape-a"></div>
-    <div class="shape shape-b"></div>
-    <div class="shape shape-c"></div>
-  </div>
-
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
-    <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3c0 .34-.02.67-.02 1A7.79 7.79 0 0 0 19 11.81c.33 0 .66-.02 1-.02z"/></svg>
-    <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66 5.66 1.41 1.41M4.93 4.93l1.41 1.41m0 11.32-1.41 1.41m12.73-12.73 1.41-1.41M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
-  </button>
-
-  <div class="site-wrap">
-    <header class="hero panel reveal">
-      <div class="hero-avatar">
-        <img src="images/profile.jpg" alt="Portrait of Mi Chow">
-        <span class="status-pill">Open to Work</span>
-      </div>
-      <div class="hero-copy">
-        <p class="kicker">AI + Statistics</p>
-        <h1>Mi Chow</h1>
-        <p class="role">Algorithm Engineer and Researcher</p>
-        <p class="summary">
-          Master's student in Applied Statistics at SCMS, Fudan University. Building intelligent systems with LLMs, multi-agent workflows, and robust machine learning.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://github.com/mi-chow" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <button class="btn btn-secondary" data-copy="michow796@gmail.com">Copy Email</button>
-          <button class="btn btn-secondary" data-copy="+86 18945097736">Copy Phone</button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="panel reveal">
-        <div class="section-head">
-          <h2>Selected Work</h2>
-          <p>Recent projects and roles across industry, research, and competition.</p>
-        </div>
-        <div class="grid cards-3">
-          <article class="card">
-            <div class="media"><img src="images/xiaomei.jpg" alt="Xiaomei app"></div>
-            <h3>LLM Application Intern - Meituan</h3>
-            <p>Contributing to Xiaomei, an AI life assistant delivering practical conversational support.</p>
-            <p class="meta">Aug 2025 - Present</p>
-          </article>
-          <article class="card">
-            <div class="media icon-tile" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 19h16M6 17V7l6-3 6 3v10M9 10h6m-6 3h6"/></svg>
+    <div class="opening-screen" id="openingScreen" role="dialog" aria-modal="true" aria-labelledby="openingTitle">
+        <div class="opening-brush opening-brush-a"></div>
+        <div class="opening-brush opening-brush-b"></div>
+        <div class="opening-brush opening-brush-c"></div>
+        <div class="opening-panel">
+            <p class="opening-kicker">Portfolio Atelier</p>
+            <h1 id="openingTitle">Mi Chow</h1>
+            <p class="opening-subtitle">
+                Algorithm research, compositional thinking, and product craftsmanship shaped like an oil study.
+            </p>
+            <div class="opening-meta" aria-hidden="true">
+                <span>Shanghai</span>
+                <span>Applied Statistics</span>
+                <span>LLM Systems</span>
             </div>
-            <h3>Cross-Domain Depression Detection</h3>
-            <p>Building BDDA-Net for robust performance across heterogeneous clinical datasets.</p>
-            <p class="meta">Aug 2025 - Jun 2026</p>
-          </article>
-          <article class="card">
-            <div class="media icon-tile" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3 2 9l10 6 10-6-10-6Zm0 7.5 10-6M2 9v6l10 6 10-6V9"/></svg>
+            <div class="opening-actions">
+                <button type="button" id="openPortfolio" class="open-button">Open Portfolio</button>
+                <button type="button" id="skipIntro" class="skip-button">Skip animation</button>
             </div>
-            <h3>Kaggle Silver Medal</h3>
-            <p>LLM text detection with custom BPE + TF-IDF ensemble, reaching 0.90 AUC-ROC.</p>
-            <p class="meta">Oct 2023 - Nov 2023</p>
-          </article>
         </div>
-      </section>
+    </div>
 
-      <section class="split reveal">
-        <article class="panel">
-          <div class="section-head">
-            <h2>Skills</h2>
-          </div>
-          <div class="chips">
-            <span>LLM Fine-tuning</span>
-            <span>RLHF / DPO</span>
-            <span>Multi-agent Systems</span>
-            <span>PyTorch</span>
-            <span>Transformers</span>
-            <span>Cross-domain Adaptation</span>
-            <span>Ensemble Learning</span>
-            <span>Feature Engineering</span>
-          </div>
-        </article>
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-        <article class="panel">
-          <div class="section-head">
-            <h2>Education</h2>
-          </div>
-          <div class="edu-row">
-            <img src="images/fudan_icon.jpg" alt="Fudan University logo">
-            <div>
-              <h3>Master of Applied Statistics</h3>
-              <p>Fudan University - SCMS</p>
-              <p class="meta">Sep 2023 - Jun 2026</p>
+    <div class="site-shell" id="siteShell">
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <a class="brand-mark" href="#top">Mi Chow</a>
+                <nav class="top-nav" aria-label="Primary">
+                    <a href="#works">Works</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#capabilities">Capabilities</a>
+                    <a href="#philosophy">Philosophy</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
-          </div>
-        </article>
-      </section>
+        </header>
 
-      <section class="panel reveal">
-        <div class="section-head">
-          <h2>Interests</h2>
-        </div>
-        <div class="chips interests">
-          <span>Basketball</span>
-          <span>Ping Pong</span>
-          <span>Photography</span>
-          <span>Badminton</span>
-          <span>Music</span>
-          <span>Travel</span>
-          <span>Coffee</span>
-        </div>
-      </section>
-    </main>
+        <main>
+            <section class="hero-section container reveal" id="top">
+                <div class="hero-portrait-wrap">
+                    <div class="portrait-frame">
+                        <img src="images/profile.jpg" alt="Portrait of Mi Chow" class="portrait-image">
+                    </div>
+                    <p class="portrait-caption">Algorithm Engineer / Researcher</p>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-label">Statistical discipline, product intuition</p>
+                    <h2>Building language systems that stay rigorous under real-world complexity.</h2>
+                    <p>
+                        I am a master&apos;s student in Applied Statistics at the Shanghai Center for Mathematical Sciences, Fudan University. I focus on LLM applications, multi-agent systems, and practical research translation.
+                    </p>
+                    <p>
+                        Current work centers on Meituan&apos;s AI life assistant products, where I design model workflows that are reliable, practical, and measurable.
+                    </p>
+                    <blockquote class="hero-quote">Do the hard but right thing.</blockquote>
+                    <div class="hero-contacts">
+                        <button type="button" class="contact-pill" data-copy="michow796@gmail.com" data-label="Email">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                            <span>michow796@gmail.com</span>
+                        </button>
+                        <button type="button" class="contact-pill" data-copy="+86 18945097736" data-label="Phone">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <span>+86 189-4509-7736</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-    <footer class="panel footer reveal">
-      <p>Do the hard but right thing.</p>
-      <p>Mi Chow (c) 2026</p>
-    </footer>
-  </div>
+            <section class="chapter container reveal" id="works">
+                <div class="chapter-heading">
+                    <p class="chapter-index">01</p>
+                    <div>
+                        <h3>Selected Works</h3>
+                        <p>Three recent studies across product, research, and competition.</p>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card project-card-primary">
+                        <p class="project-meta">Aug 2025 - Present</p>
+                        <h4>Meituan Xiaomei</h4>
+                        <p>
+                            Contributing to an AI life assistant powered by LLM-based conversational pipelines for daily scenarios.
+                        </p>
+                        <div class="project-tags">
+                            <span>LLM Application</span>
+                            <span>Product Iteration</span>
+                            <span>Agent Design</span>
+                        </div>
+                        <a class="project-link" href="https://apps.apple.com/us/app/%E5%B0%8F%E7%BE%8E-ai%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%A7%98%E4%B9%A6/id6748377336?l=zh-Hans-CN" target="_blank" rel="noopener noreferrer">
+                            View App Page <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </article>
 
-  <div id="toast" role="status" aria-live="polite"></div>
+                    <article class="project-card project-card-secondary">
+                        <p class="project-meta">Aug 2025 - Jun 2026</p>
+                        <h4>BDDA-Net Research</h4>
+                        <p>
+                            Developing a robust depression detection framework with cross-domain adaptation to improve generalization across clinical datasets.
+                        </p>
+                        <div class="project-tags">
+                            <span>Cross-domain</span>
+                            <span>Clinical Data</span>
+                            <span>Model Robustness</span>
+                        </div>
+                    </article>
 
-  <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById('theme-toggle');
-    const toast = document.getElementById('toast');
+                    <article class="project-card project-card-tertiary">
+                        <p class="project-meta">Oct 2023 - Nov 2023</p>
+                        <h4>Kaggle Text Detection</h4>
+                        <p>
+                            Built a custom ensemble with BPE and TF-IDF features for AI-generated text detection, reaching 0.90 AUC-ROC.
+                        </p>
+                        <div class="project-tags">
+                            <span>Ensemble Learning</span>
+                            <span>Feature Engineering</span>
+                            <span>Silver Medal</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-    function setTheme(theme) {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    }
+            <section class="chapter container reveal" id="timeline">
+                <div class="chapter-heading">
+                    <p class="chapter-index">02</p>
+                    <div>
+                        <h3>Timeline</h3>
+                        <p>Academic grounding and current professional path.</p>
+                    </div>
+                </div>
+                <div class="timeline-layout">
+                    <article class="timeline-block">
+                        <h4>Education</h4>
+                        <div class="timeline-item">
+                            <img src="images/fudan_icon.jpg" alt="Fudan University logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <h5>Fudan University</h5>
+                                <p>Master of Applied Statistics, Shanghai Center for Mathematical Sciences</p>
+                                <span class="timeline-date">Sep 2023 - Jun 2026</span>
+                            </div>
+                        </div>
+                    </article>
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
+                    <article class="timeline-block">
+                        <h4>Professional Path</h4>
+                        <div class="timeline-item">
+                            <img src="images/xiaomei.jpg" alt="Xiaomei app icon" class="timeline-logo">
+                            <div class="timeline-text">
+                                <h5>LLM Application Algorithm Intern</h5>
+                                <p>Meituan</p>
+                                <span class="timeline-date">Aug 2025 - Present</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-    toggle.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-    });
+            <section class="chapter container reveal" id="capabilities">
+                <div class="chapter-heading">
+                    <p class="chapter-index">03</p>
+                    <div>
+                        <h3>Capabilities</h3>
+                        <p>A practical stack for production-facing AI systems.</p>
+                    </div>
+                </div>
 
-    document.querySelectorAll('[data-copy]').forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const value = btn.getAttribute('data-copy');
-        try {
-          await navigator.clipboard.writeText(value);
-          toast.textContent = value + ' copied';
-          toast.classList.add('show');
-          setTimeout(() => toast.classList.remove('show'), 1300);
-        } catch (_) {
-          toast.textContent = 'Copy failed';
-          toast.classList.add('show');
-          setTimeout(() => toast.classList.remove('show'), 1300);
-        }
-      });
-    });
+                <div class="capability-panel">
+                    <div class="capability-tags">
+                        <span>LLM Fine-tuning and Alignment (RLHF/DPO)</span>
+                        <span>Multi-agent Systems</span>
+                        <span>Cross-domain Adaptation</span>
+                        <span>Ensemble Learning</span>
+                        <span>PyTorch and Transformers</span>
+                        <span>Feature Engineering</span>
+                    </div>
+                </div>
 
-    const revealItems = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('in');
-      });
-    }, { threshold: 0.15 });
+                <div class="interest-row" aria-label="Interests">
+                    <div class="interest-item"><i class="fa-solid fa-basketball" aria-hidden="true"></i><span>Basketball</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i><span>Ping Pong</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i><span>Photography</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i><span>Badminton</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-music" aria-hidden="true"></i><span>Music</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-plane" aria-hidden="true"></i><span>Travel</span></div>
+                    <div class="interest-item"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i><span>Coffee</span></div>
+                </div>
+            </section>
 
-    revealItems.forEach((el) => observer.observe(el));
-  </script>
+            <section class="chapter container reveal" id="philosophy">
+                <div class="chapter-heading">
+                    <p class="chapter-index">04</p>
+                    <div>
+                        <h3>Philosophy</h3>
+                        <p>Research execution as composition, not ornament.</p>
+                    </div>
+                </div>
+
+                <div class="philosophy-layout">
+                    <article class="quote-card">
+                        <p>
+                            I treat algorithm work like a studio practice. Every project starts from structure, then moves through texture, and ends in clarity. The objective is not novelty for its own sake. The objective is dependable intelligence that remains useful once it leaves the lab.
+                        </p>
+                    </article>
+
+                    <aside class="contact-card" id="contact">
+                        <h4>Contact</h4>
+                        <p>Open to collaborations in LLM applications, agent systems, and research engineering.</p>
+                        <a href="mailto:michow796@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>michow796@gmail.com</a>
+                        <a href="tel:+8618945097736"><i class="fa-solid fa-phone" aria-hidden="true"></i>+86 189-4509-7736</a>
+                        <a href="https://github.com/mi-chow" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>github.com/mi-chow</a>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>Mi Chow Portfolio</p>
+                <p>Copyright <span id="year"></span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            const body = document.body;
+            const openingScreen = document.getElementById('openingScreen');
+            const openPortfolio = document.getElementById('openPortfolio');
+            const skipIntro = document.getElementById('skipIntro');
+            const revealTargets = document.querySelectorAll('.reveal');
+            const copyTargets = document.querySelectorAll('[data-copy]');
+            const toastContainer = document.getElementById('toast-container');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            body.classList.add('opening-active');
+
+            function hideOpening() {
+                if (!openingScreen || openingScreen.classList.contains('opening-screen--exit')) {
+                    return;
+                }
+                openingScreen.classList.add('opening-screen--exit');
+                body.classList.remove('opening-active');
+                window.setTimeout(function () {
+                    openingScreen.setAttribute('hidden', 'hidden');
+                    openingScreen.removeAttribute('aria-modal');
+                }, 850);
+            }
+
+            if (openPortfolio) {
+                openPortfolio.addEventListener('click', hideOpening);
+            }
+
+            if (skipIntro) {
+                skipIntro.addEventListener('click', hideOpening);
+            }
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && openingScreen && !openingScreen.hasAttribute('hidden')) {
+                    hideOpening();
+                }
+            });
+
+            if (reduceMotion) {
+                openingScreen.classList.add('opening-screen--reduced');
+            }
+
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                revealTargets.forEach(function (element) {
+                    element.classList.add('is-visible');
+                });
+            } else {
+                const revealObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.16,
+                    rootMargin: '0px 0px -8% 0px'
+                });
+
+                revealTargets.forEach(function (element) {
+                    revealObserver.observe(element);
+                });
+            }
+
+            function showToast(message) {
+                if (!toastContainer) {
+                    return;
+                }
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.textContent = message;
+                toastContainer.appendChild(toast);
+
+                window.requestAnimationFrame(function () {
+                    toast.classList.add('show');
+                });
+
+                window.setTimeout(function () {
+                    toast.classList.remove('show');
+                    window.setTimeout(function () {
+                        toast.remove();
+                    }, 240);
+                }, 1800);
+            }
+
+            copyTargets.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const value = button.getAttribute('data-copy');
+                    const label = button.getAttribute('data-label') || 'Text';
+
+                    if (!value || !navigator.clipboard) {
+                        showToast('Clipboard unavailable');
+                        return;
+                    }
+
+                    navigator.clipboard.writeText(value)
+                        .then(function () {
+                            showToast(label + ' copied');
+                        })
+                        .catch(function () {
+                            showToast('Copy failed');
+                        });
+                });
+            });
+
+            const yearNode = document.getElementById('year');
+            if (yearNode) {
+                yearNode.textContent = String(new Date().getFullYear());
+            }
+        }());
+    </script>
 </body>
 </html>
