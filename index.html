@@ -23,23 +23,38 @@
 </head>
 <body>
     <div class="opening-screen" id="openingScreen" role="dialog" aria-modal="true" aria-labelledby="openingTitle">
+        <div class="opening-curtain opening-curtain-left" aria-hidden="true"></div>
+        <div class="opening-curtain opening-curtain-right" aria-hidden="true"></div>
         <div class="opening-brush opening-brush-a"></div>
         <div class="opening-brush opening-brush-b"></div>
         <div class="opening-brush opening-brush-c"></div>
-        <div class="opening-panel">
-            <p class="opening-kicker">Portfolio Atelier</p>
-            <h1 id="openingTitle">Mi Chow</h1>
-            <p class="opening-subtitle">
-                Algorithm research, compositional thinking, and product craftsmanship shaped like an oil study.
-            </p>
-            <div class="opening-meta" aria-hidden="true">
-                <span>Shanghai</span>
-                <span>Applied Statistics</span>
-                <span>LLM Systems</span>
-            </div>
-            <div class="opening-actions">
-                <button type="button" id="openPortfolio" class="open-button">Open Portfolio</button>
-                <button type="button" id="skipIntro" class="skip-button">Skip animation</button>
+        <div class="opening-stage">
+            <p class="opening-kicker">Portfolio Atelier - 2026 Edition</p>
+            <div class="opening-grid">
+                <div class="opening-mainline">
+                    <h1 id="openingTitle">
+                        <span>Mi Chow</span>
+                        <span>Algorithm Atelier</span>
+                    </h1>
+                    <p class="opening-lead">
+                        Statistical rigor, language-model systems, and product execution composed like an oil canvas.
+                    </p>
+                </div>
+                <div class="opening-side">
+                    <p class="opening-scene">Scene 01 - Entrance Hall</p>
+                    <p class="opening-subtitle">
+                        Enter a curated study of LLM application, research structure, and engineering taste.
+                    </p>
+                    <div class="opening-meta" aria-hidden="true">
+                        <span>Shanghai</span>
+                        <span>Applied Statistics</span>
+                        <span>LLM Systems</span>
+                    </div>
+                    <div class="opening-actions">
+                        <button type="button" id="openPortfolio" class="open-button">Enter Gallery</button>
+                        <button type="button" id="skipIntro" class="skip-button">Skip Intro</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -257,6 +272,17 @@
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             body.classList.add('opening-active');
+            if (openingScreen) {
+                if (reduceMotion) {
+                    openingScreen.classList.add('opening-screen--ready');
+                } else {
+                    window.requestAnimationFrame(function () {
+                        window.setTimeout(function () {
+                            openingScreen.classList.add('opening-screen--ready');
+                        }, 80);
+                    });
+                }
+            }
 
             function hideOpening() {
                 if (!openingScreen || openingScreen.classList.contains('opening-screen--exit')) {
@@ -280,6 +306,9 @@
 
             document.addEventListener('keydown', function (event) {
                 if (event.key === 'Escape' && openingScreen && !openingScreen.hasAttribute('hidden')) {
+                    hideOpening();
+                }
+                if (event.key === 'Enter' && openingScreen && !openingScreen.hasAttribute('hidden')) {
                     hideOpening();
                 }
             });
