@@ -1,518 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Chow - Personal Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Chow | AI Algorithm Engineer</title>
+  <meta name="description" content="Mi Chow personal website - AI Algorithm Engineer focused on LLMs and multi-agent systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">🌙</span>
-    </button>
+  <div class="bg-layers" aria-hidden="true">
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    <div class="shape shape-c"></div>
+  </div>
 
-    <!-- Balanced Animated Background -->
-    <div class="animated-bg">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="floating-dots">
-            <div class="dot dot-1"></div>
-            <div class="dot dot-2"></div>
-            <div class="dot dot-3"></div>
-        </div>
-    </div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+    <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3c0 .34-.02.67-.02 1A7.79 7.79 0 0 0 19 11.81c.33 0 .66-.02 1-.02z"/></svg>
+    <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66 5.66 1.41 1.41M4.93 4.93l1.41 1.41m0 11.32-1.41 1.41m12.73-12.73 1.41-1.41M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+  </button>
 
-    <header class="hero">
-        <div class="hero-decorations">
-            <div class="hero-decoration deco-math"><span class="deco-icon">📐</span> Math</div>
-            <div class="hero-decoration deco-stat"><span class="deco-icon">📊</span> Statistics</div>
-            <div class="hero-decoration deco-1"><span class="deco-icon">🤖</span> LLM</div>
-            <div class="hero-decoration deco-2"><span class="deco-icon">🎨</span> Diffusion</div>
-            <div class="hero-decoration deco-3"><span class="deco-icon">🕵️</span> Agents</div>
-            <div class="hero-decoration deco-4"><span class="deco-icon">⚖️</span> RLHF</div>
+  <div class="site-wrap">
+    <header class="hero panel reveal">
+      <div class="hero-avatar">
+        <img src="images/profile.jpg" alt="Portrait of Mi Chow">
+        <span class="status-pill">Open to Work</span>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker">AI + Statistics</p>
+        <h1>Mi Chow</h1>
+        <p class="role">Algorithm Engineer and Researcher</p>
+        <p class="summary">
+          Master's student in Applied Statistics at SCMS, Fudan University. Building intelligent systems with LLMs, multi-agent workflows, and robust machine learning.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/mi-chow" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <button class="btn btn-secondary" data-copy="michow796@gmail.com">Copy Email</button>
+          <button class="btn btn-secondary" data-copy="+86 18945097736">Copy Phone</button>
         </div>
-        <div class="container hero-content">
-            <div class="profile-image-container">
-                <img src="images/profile.jpg" alt="Mi Chow" class="profile-image">
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    Open to Work
-                </div>
-            </div>
-            <div class="hero-text">
-                <h1>Hi, I'm Mi Chow!<span class="sparkle-emoji">✨</span></h1>
-                <p class="subtitle">Algorithm Engineer & Researcher 🚀</p>
-                <p class="motto">Do the hard but right thing.</p>
-                <p class="bio">
-                    I'm a master's student in <strong>Applied Statistics</strong> at <strong>Shanghai Center for Mathematical Sciences (SCMS)</strong>, <strong>Fudan University</strong>. I'm passionate about <strong>LLMs</strong> and <strong>Multi-agent Systems</strong>. 
-                    Currently building smarter agents at Meituan. I love turning complex data into actionable intelligence.
-                </p>
-                <div class="contact-info">
-                    <a href="javascript:void(0)" onclick="copyToClipboard('michow796@gmail.com', 'Email copied! ✨')"><i class="fas fa-envelope"></i> michow796@gmail.com</a>
-                    <a href="javascript:void(0)" onclick="copyToClipboard('+86 18945097736', 'Phone copied! 📱')"><i class="fas fa-phone"></i> +86 189-4509-7736</a>
-                </div>
-            </div>
-        </div>
-        <!-- Colorful Dashed Line as Border -->
-        <div class="colorful-dashed-line">
-            <div class="dashed-line"></div>
-        </div>
+      </div>
     </header>
 
-    <!-- Toast Notification Container -->
-    <div id="toast-container"></div>
-
-    <!-- Background Decorations for Sections -->
-    <div class="section-decorations">
-        <div class="hero-decoration deco-7"><span class="deco-icon">🧠</span> CoT</div>
-        <div class="hero-decoration deco-8"><span class="deco-icon">📚</span> RAG</div>
-        <div class="hero-decoration deco-9"><span class="deco-icon">🎯</span> Fine-tuning</div>
-        <div class="hero-decoration deco-10"><span class="deco-icon">🎨</span> AIGC</div>
-        <div class="hero-decoration deco-11"><span class="deco-icon">🤝</span> Multi-agent</div>
-        <div class="hero-decoration deco-12"><span class="deco-icon">🗣️</span> NLP</div>
-        <div class="hero-decoration deco-13"><span class="deco-icon">🐍</span> Python</div>
-        <div class="hero-decoration deco-14"><span class="deco-icon">📊</span> Data Mining</div>
-    </div>
-
-    <main class="container">
-        
-        <!-- Education Section -->
-        <section class="section-education">
-            <h2 class="section-title"><span class="icon-box">🎓</span> Education</h2>
-            <div class="card-list">
-                <div class="card wide-card">
-                    <div class="card-left">
-                        <div class="card-logo-wrapper">
-                            <img src="images/fudan_icon.jpg" alt="Fudan University Logo" class="card-logo">
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <h3>Master of Applied Statistics</h3>
-                        <h4>Fudan University</h4>
-                    </div>
-                    <div class="card-right">
-                        <span class="period">Sep 2023 - Jun 2026</span>
-                    </div>
-                </div>
-                <!-- 
-                <div class="card wide-card">
-                    <div class="card-left">
-                        <div class="card-logo-wrapper">
-                            <img src="images/nefu_icon.png" alt="NEFU Logo" class="card-logo">
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <h3>Bachelor of Int'l Economics and Trade</h3>
-                        <h4>Northeast Forestry University</h4>
-                    </div>
-                    <div class="card-right">
-                        <span class="period">Sep 2017 - Jun 2022</span>
-                    </div>
-                </div>
-                -->
+    <main>
+      <section class="panel reveal">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+          <p>Recent projects and roles across industry, research, and competition.</p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card">
+            <div class="media"><img src="images/xiaomei.jpg" alt="Xiaomei app"></div>
+            <h3>LLM Application Intern - Meituan</h3>
+            <p>Contributing to Xiaomei, an AI life assistant delivering practical conversational support.</p>
+            <p class="meta">Aug 2025 - Present</p>
+          </article>
+          <article class="card">
+            <div class="media icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19h16M6 17V7l6-3 6 3v10M9 10h6m-6 3h6"/></svg>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="section-experience">
-            <h2 class="section-title"><span class="icon-box">💼</span> Experience</h2>
-            <div class="card-list">
-                <div class="card wide-card">
-                    <div class="card-left">
-                        <div class="card-logo-wrapper">
-                            <img src="images/xiaomei.jpg" alt="Xiaomei App Icon" class="card-logo">
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <h3>LLM Application Algorithm Intern</h3>
-                        <h4>Meituan</h4>
-                        <p class="card-desc">
-                            Contributing to <a href="https://apps.apple.com/us/app/%E5%B0%8F%E7%BE%8E-ai%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%A7%98%E4%B9%A6/id6748377336?l=zh-Hans-CN" target="_blank" class="project-link">Xiaomei</a>, Meituan's AI Life Assistant. Leveraging LLM technology to provide intelligent, conversational services for daily life.
-                        </p>
-                    </div>
-                    <div class="card-right">
-                        <span class="tag tag-intern">Internship</span>
-                        <span class="period">Aug 2025 - Present</span>
-                    </div>
-                </div>
-                <div class="card wide-card">
-                    <div class="card-left">
-                        <div class="card-icon"><i class="fas fa-microscope"></i></div>
-                    </div>
-                    <div class="card-center">
-                        <h3>Cross-Domain Depression Detection</h3>
-                        <h4>Research Project</h4>
-                        <p class="card-desc">Developing BDDA-Net for robust depression detection across different clinical datasets.</p>
-                    </div>
-                    <div class="card-right">
-                        <span class="tag tag-research">Research</span>
-                        <span class="period">Aug 2025 - Jun 2026</span>
-                    </div>
-                </div>
-                <div class="card wide-card">
-                    <div class="card-left">
-                        <div class="card-icon"><i class="fas fa-trophy"></i></div>
-                    </div>
-                    <div class="card-center">
-                        <h3>Kaggle: LLM Generated Text Detection</h3>
-                        <h4>Silver Medal Winner 🥈</h4>
-                        <p class="card-desc">
-                            Built a robust ensemble classifier (MNB + SGD) using custom BPE tokenization and TF-IDF features to distinguish AI-generated text. Achieved <strong>0.90 AUC-ROC</strong>.
-                        </p>
-                    </div>
-                    <div class="card-right">
-                        <span class="tag tag-competition">Competition</span>
-                        <span class="period">Oct 2023 - Nov 2023</span>
-                    </div>
-                </div>
+            <h3>Cross-Domain Depression Detection</h3>
+            <p>Building BDDA-Net for robust performance across heterogeneous clinical datasets.</p>
+            <p class="meta">Aug 2025 - Jun 2026</p>
+          </article>
+          <article class="card">
+            <div class="media icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 2 9l10 6 10-6-10-6Zm0 7.5 10-6M2 9v6l10 6 10-6V9"/></svg>
             </div>
-        </section>
+            <h3>Kaggle Silver Medal</h3>
+            <p>LLM text detection with custom BPE + TF-IDF ensemble, reaching 0.90 AUC-ROC.</p>
+            <p class="meta">Oct 2023 - Nov 2023</p>
+          </article>
+        </div>
+      </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section">
-            <h2 class="section-title"><span class="icon-box">⚡</span> Professional Skills</h2>
-            <div class="wide-card skill-summary-card">
-                <div class="card-left">
-                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-                </div>
-                <div class="card-center">
-                    <h3>Advanced Technical Stack</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">LLM Fine-tuning & Alignment (RLHF/DPO)</span>
-                        <span class="skill-tag">Multi-agent Systems</span>
-                        <span class="skill-tag">Cross-domain Adaptation</span>
-                        <span class="skill-tag">Ensemble Learning</span>
-                        <span class="skill-tag">PyTorch & Transformers</span>
-                        <span class="skill-tag">Feature Engineering</span>
-                    </div>
-                </div>
+      <section class="split reveal">
+        <article class="panel">
+          <div class="section-head">
+            <h2>Skills</h2>
+          </div>
+          <div class="chips">
+            <span>LLM Fine-tuning</span>
+            <span>RLHF / DPO</span>
+            <span>Multi-agent Systems</span>
+            <span>PyTorch</span>
+            <span>Transformers</span>
+            <span>Cross-domain Adaptation</span>
+            <span>Ensemble Learning</span>
+            <span>Feature Engineering</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="section-head">
+            <h2>Education</h2>
+          </div>
+          <div class="edu-row">
+            <img src="images/fudan_icon.jpg" alt="Fudan University logo">
+            <div>
+              <h3>Master of Applied Statistics</h3>
+              <p>Fudan University - SCMS</p>
+              <p class="meta">Sep 2023 - Jun 2026</p>
             </div>
-        </section>
+          </div>
+        </article>
+      </section>
 
-        <!-- Interests Section -->
-        <section class="section-interests">
-            <h2 class="section-title"><span class="icon-box">🌟</span> Interests & Hobbies</h2>
-            <div class="interests-grid">
-                <div class="interest-item">
-                    <span class="interest-icon">🏀</span>
-                    <span>Basketball</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">🏓</span>
-                    <span>Ping Pong</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">📸</span>
-                    <span>Photography</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">🏸</span>
-                    <span>Badminton</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">🎵</span>
-                    <span>Music</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">✈️</span>
-                    <span>Traveling</span>
-                </div>
-                <div class="interest-item">
-                    <span class="interest-icon">☕</span>
-                    <span>Coffee</span>
-                </div>
-            </div>
-        </section>
-
+      <section class="panel reveal">
+        <div class="section-head">
+          <h2>Interests</h2>
+        </div>
+        <div class="chips interests">
+          <span>Basketball</span>
+          <span>Ping Pong</span>
+          <span>Photography</span>
+          <span>Badminton</span>
+          <span>Music</span>
+          <span>Travel</span>
+          <span>Coffee</span>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>Made with ❤️ by Mi Chow © 2025</p>
-            <div class="social-links">
-                <a href="https://github.com/mi-chow" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
+    <footer class="panel footer reveal">
+      <p>Do the hard but right thing.</p>
+      <p>Mi Chow (c) 2026</p>
     </footer>
+  </div>
 
-    <!-- Interactive Scripts -->
-    <script>
-        // Theme toggle functionality
-        function toggleTheme() {
-            const html = document.documentElement;
-            const themeIcon = document.querySelector('.theme-icon');
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Update icon
-            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-            
-            // Add ripple effect
-            const button = document.querySelector('.theme-toggle');
-            button.style.transform = 'scale(0.9) rotate(180deg)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1.1) rotate(360deg)';
-            }, 150);
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    const toast = document.getElementById('toast');
+
+    function setTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+
+    toggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+    });
+
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const value = btn.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(value);
+          toast.textContent = value + ' copied';
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 1300);
+        } catch (_) {
+          toast.textContent = 'Copy failed';
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 1300);
         }
+      });
+    });
 
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            const themeIcon = document.querySelector('.theme-icon');
-            themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-        });
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('in');
+      });
+    }, { threshold: 0.15 });
 
-        // Balanced sparkle effect
-        document.addEventListener('mousemove', (e) => {
-            if (Math.random() > 0.98) {
-                createBalancedSparkle(e.clientX, e.clientY);
-            }
-        });
-
-        function createBalancedSparkle(x, y) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = x + 'px';
-            sparkle.style.top = y + 'px';
-            sparkle.innerHTML = ['✨', '⭐'][Math.floor(Math.random() * 2)];
-            sparkle.style.color = ['#218bff', '#8250df'][Math.floor(Math.random() * 2)];
-            sparkle.style.fontSize = '14px';
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => sparkle.remove(), 900);
-        }
-
-        // Balanced particle effect on click
-        document.addEventListener('click', (e) => {
-            if (e.target.tagName !== 'A' && !e.target.closest('.theme-toggle')) {
-                createBalancedParticles(e.clientX, e.clientY);
-            }
-        });
-
-        function createBalancedParticles(x, y) {
-            const colors = ['#218bff', '#8250df', '#c8131d', '#9a6700'];
-            const particleCount = 10; // Balanced amount
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = x + 'px';
-                particle.style.top = y + 'px';
-                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
-                const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 50 + Math.random() * 50; // Moderate velocity
-                const tx = Math.cos(angle) * velocity;
-                const ty = Math.sin(angle) * velocity;
-                
-                particle.style.transform = `translate(${tx}px, ${ty}px) scale(0)`;
-                document.body.appendChild(particle);
-                
-                setTimeout(() => particle.remove(), 1000);
-            }
-        }
-
-        // Add entrance animation to elements
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards and sections
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.wide-card, section');
-            elements.forEach((el) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
-
-        // Add hover sound effect (visual feedback)
-        document.querySelectorAll('.wide-card, .interest-item').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.transform = element.style.transform + ' scale(1.02)';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                element.style.transform = element.style.transform.replace(' scale(1.02)', '');
-            });
-        });
-
-        // 音频上下文初始化
-        let audioContext = null;
-        let audioEnabled = false;
-        
-        function initAudio() {
-            if (!audioContext) {
-                try {
-                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    audioEnabled = true;
-                } catch (error) {
-                    console.log('Audio context creation failed:', error);
-                }
-            }
-            if (audioContext && audioContext.state === 'suspended') {
-                audioContext.resume();
-            }
-        }
-
-        // 模拟真实的机械键盘“啪嗒”声
-        function playTypingSound() {
-            if (!audioContext) return;
-            if (audioContext.state === 'suspended') audioContext.resume();
-            
-            try {
-                const now = audioContext.currentTime;
-                
-                // 1. 高频撞击声 (Click) - 模拟按键触底的清脆声
-                const clickOsc = audioContext.createOscillator();
-                const clickGain = audioContext.createGain();
-                clickOsc.type = 'triangle';
-                clickOsc.frequency.setValueAtTime(2500 + Math.random() * 500, now);
-                clickGain.gain.setValueAtTime(0.1, now);
-                clickGain.gain.exponentialRampToValueAtTime(0.01, now + 0.01);
-                clickOsc.connect(clickGain);
-                clickGain.connect(audioContext.destination);
-                clickOsc.start(now);
-                clickOsc.stop(now + 0.01);
-
-                // 2. 机械回响声 (Clack) - 模拟键盘空腔的声音
-                const bufferSize = audioContext.sampleRate * 0.06; // 延长至 60ms
-                const buffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
-                const data = buffer.getChannelData(0);
-                for (let i = 0; i < bufferSize; i++) {
-                    data[i] = Math.random() * 2 - 1;
-                }
-                
-                const noise = audioContext.createBufferSource();
-                noise.buffer = buffer;
-                
-                const filter = audioContext.createBiquadFilter();
-                filter.type = 'bandpass';
-                filter.frequency.setValueAtTime(1000 + Math.random() * 300, now); // 稍微降低频率，听起来更厚实
-                filter.Q.value = 1.5;
-                
-                const noiseGain = audioContext.createGain();
-                noiseGain.gain.setValueAtTime(0.06, now); // 稍微降低初始音量
-                noiseGain.gain.exponentialRampToValueAtTime(0.005, now + 0.05); // 延长衰减过程
-                
-                noise.connect(filter);
-                filter.connect(noiseGain);
-                noiseGain.connect(audioContext.destination);
-                
-                noise.start(now);
-                noise.stop(now + 0.06);
-                
-            } catch (error) {
-                console.log('Sound failed:', error);
-            }
-        }
-
-        // Copy to clipboard functionality
-        function copyToClipboard(text, message) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast(message);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-
-        function showToast(message) {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.textContent = message;
-            
-            container.appendChild(toast);
-            
-            // Trigger animation
-            setTimeout(() => toast.classList.add('show'), 10);
-            
-            // Remove toast after 2 seconds
-            setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 300);
-            }, 2000);
-        }
-
-        // Typing effect for hero title
-        window.addEventListener('load', () => {
-            const heroTitle = document.querySelector('.hero h1');
-            const sparkleEmoji = heroTitle.querySelector('.sparkle-emoji');
-            const originalText = "Hi, I'm Mi Chow!";
-            
-            // 初始状态：清空文本
-            heroTitle.textContent = '';
-            heroTitle.appendChild(sparkleEmoji);
-            
-            let started = false;
-
-            function startTyping() {
-                if (started) return;
-                started = true;
-                
-                initAudio();
-                
-                // 立即添加打字类，显示光标
-                heroTitle.classList.add('typing-text');
-                
-                let charIndex = 0;
-                const typingSpeed = 160; // 放慢速度，从 120ms 调至 160ms
-                
-                function typeChar() {
-                    if (charIndex < originalText.length) {
-                        const existingText = heroTitle.childNodes[0];
-                        if (existingText && existingText.nodeType === Node.TEXT_NODE) {
-                            existingText.textContent = originalText.substring(0, charIndex + 1);
-                        } else {
-                            heroTitle.insertBefore(document.createTextNode(originalText.substring(0, charIndex + 1)), sparkleEmoji);
-                        }
-                        
-                        // 每一个字符出现都播放打字音效
-                        playTypingSound();
-                        
-                        charIndex++;
-                        setTimeout(typeChar, typingSpeed);
-                    } else {
-                        // 打字完成，保持光标闪烁
-                        heroTitle.classList.remove('typing-text');
-                        heroTitle.classList.add('typing-animation-complete');
-                    }
-                }
-                
-                typeChar();
-            }
-
-            // 页面加载后延迟一小会儿自动开始
-            setTimeout(startTyping, 500);
-
-            // 兜底：如果浏览器拦截了自动播放，用户第一次点击时确保音频上下文被激活
-            document.body.addEventListener('click', () => {
-                if (audioContext && audioContext.state === 'suspended') {
-                    audioContext.resume();
-                }
-            }, { once: true });
-        });
-    </script>
+    revealItems.forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
